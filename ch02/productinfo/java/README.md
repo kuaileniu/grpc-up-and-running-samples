@@ -1,5 +1,17 @@
 ## ``ProductInfo`` Service and Client - Java Implementation
+## 由proto 生成java源代码
+- 
+(productinfo/java/server) and execute the following
+shell command,
 
+```
+gradle build
+
+生成 
+server/build/generated/source/proto/main/grpc/ecommerce/ProductInfoGrpc.java
+和
+server/build/generated/source/proto/main/java/ecommerce/ProductInfoQuterClass.java
+```
 ### Building and Running Service
 
 In order to build gradle project, Go to ``Java`` project root directory location (samples) and execute
