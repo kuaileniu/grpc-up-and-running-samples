@@ -38,11 +38,14 @@ Pre-generated stub file is included in the go project. If you need to generate t
 ``` 
 protoc -I proto/ proto/product_info.proto --go_out=plugins=grpc:go/server/ecommerce
 
-升级 go.mod 为:
+升级(server and client) go.mod 为:
 	google.golang.org/grpc v1.44.0
 	google.golang.org/protobuf v1.27.1
 
 去掉末尾的ecommerce，修改为
 protoc -I proto/ proto/product_info.proto --go_out=plugins=grpc:./go/server/    // 生成go语言，需要预装 protoc-gen-go ; go install github.com/golang/protobuf/protoc-gen-go
+
+
+protoc -I proto/ proto/product_info.proto --go_out=plugins=grpc:./go/client/    // 生成go语言，需要预装 protoc-gen-go ; go install github.com/golang/protobuf/protoc-gen-go
 
 ``` 
