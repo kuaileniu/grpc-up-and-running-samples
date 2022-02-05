@@ -1,7 +1,7 @@
 ## proto 转java源代码
 product_info.proto 文件放在 server/src/main/proto 
 
-```
+``` Gradle 6.5
 gradle build 
 ```
 server/build/generated/source/proto/main/grpc/ecommerce/ProductInfoGrpc.java

@@ -4,7 +4,7 @@
 (productinfo/java/server) and execute the following
 shell command,
 
-```
+``` Gradle 6.5
 gradle build
 
 生成 
