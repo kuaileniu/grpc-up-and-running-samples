@@ -2,6 +2,13 @@ syntax = "proto3";
 
 package ecommerce;
 
+// Please specify either:
+// • a "go_package" option in the .proto source file, or
+// • a "M" argument on the command line.
+// command from the root directory(inside productinfo directory)
+// protoc -I proto/ proto/product_info.proto --go_out=plugins=grpc:go/server/
+option go_package = "./ecommerce"; 
+
 service ProductInfo {
     rpc addProduct(Product) returns (ProductID);
     rpc getProduct(ProductID) returns (Product);
