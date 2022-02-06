@@ -3,7 +3,7 @@ package tools
 import (
 	"bytes"
 	"compress/gzip"
-	"log"
+	"go.uber.org/zap"
 )
 
 // GUnzipData ...
@@ -18,7 +18,7 @@ func GUnzipData(data []byte) (resData []byte, err error) {
 	var resB bytes.Buffer
 	_, err = resB.ReadFrom(r)
 	if err != nil {
-		log.Printf("gUnzipData error:%v\n", err)
+		zap.L().Error("gUnzipData error:",zap.Error(err))
 		return
 	}
 
