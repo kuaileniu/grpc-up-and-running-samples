@@ -7,6 +7,7 @@ import (
 	"time"
 
 	"google.golang.org/grpc"
+	wrapper "github.com/golang/protobuf/ptypes/wrappers"
 )
 
 const (
@@ -14,6 +15,8 @@ const (
 )
 
 func main() {
+	log.Println(wrapper.StringValue{Value: "00"}) // 此行仅为import wrapper后 不报未使用异常
+
 	// Setting up a connection to the server.
 	conn, err := grpc.Dial(address, grpc.WithInsecure())
 	if err != nil {
