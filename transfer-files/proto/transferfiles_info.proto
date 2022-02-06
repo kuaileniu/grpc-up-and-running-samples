@@ -1,0 +1,5 @@
+syntax = "proto3";
+
+package transferfiles;
+
+option go_package = "./transferfiles";
